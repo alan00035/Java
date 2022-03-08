@@ -4,8 +4,17 @@ public class javaStack {
         String b = "({()})";
         String c = "{}(";
 
-        if(a.length()%2 == 0 );
+        System.out.println(a.length());
 
+        if(a.length()%2 == 0 )
+           { 
+            
+            }
+            
+            }
+            // System.out.println(a.toCharArray());
+        
+        }
 
         else
             System.out.println("false");
