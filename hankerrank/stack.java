@@ -11,9 +11,9 @@ public class javaStack {
         char[] ch= b.toCharArray();
 
         Stack<Character> stacky = new Stack<>();
-        for (int i = 0; i < a.length(); i++) {
+        for (int i = 0; i < b.length(); i++) {
            if (!stacky.isEmpty()) {
-               switch(a.charAt(i)) {
+               switch(b.charAt(i)) {
                    case '}' : if (stacky.peek() == '{') {
                        stacky.pop();
                    } break;
@@ -23,13 +23,16 @@ public class javaStack {
                    case ')' : if (stacky.peek() == '(') {
                        stacky.pop();
                    } break;
-                   default: stacky.push(a.charAt(i));
+                   default: stacky.push(b.charAt(i));
              }
-           } else {
-               stacky.push(a.charAt(i));
+           } 
+           else {
+               stacky.push(b.charAt(i));
            } 
         }
-        System.out.println(stacky.isEmpty());
+
+        System.out.println(stacky);
+        // System.out.println(stacky.isEmpty());
           
     }
 }
