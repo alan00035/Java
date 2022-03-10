@@ -4,50 +4,34 @@ import javax.lang.model.util.ElementScanner6;
 
 public class javaStack {
     public static void main(String[] args) {
-        String a = "{}()";
-        String b = "({()})";
-        String d = "{}(";
+        String a = "({(){}()})()({(){}()})(){()}"; //true
+        String b = "(({()})))";  //false
+        String d ="{}()";
 
-        char[] ch= a.toCharArray();
-        int length = a.length();
+        char[] ch= b.toCharArray();
 
-        Stack<Character> stack = new Stack<>();
-      
-        for(char c : ch){
-            if (c =='{' | c =='[' | c == '('){
-                stack.push(c);
-            }
-            else{
-                if(c == '' ){
-                    System.out.println(true);
-                }
-            }
-            
-            System.out.println(stack);
-
+        Stack<Character> stacky = new Stack<>();
+        for (int i = 0; i < a.length(); i++) {
+           if (!stacky.isEmpty()) {
+               switch(a.charAt(i)) {
+                   case '}' : if (stacky.peek() == '{') {
+                       stacky.pop();
+                   } break;
+                   case ']' : if (stacky.peek() == '[') {
+                       stacky.pop();
+                   } break;
+                   case ')' : if (stacky.peek() == '(') {
+                       stacky.pop();
+                   } break;
+                   default: stacky.push(a.charAt(i));
+             }
+           } else {
+               stacky.push(a.charAt(i));
+           } 
         }
-
-        System.out.println(stack);
-
-        // System.out.println(a.length());
-
-        // if(length%2 == 0 ){
-
-        //     for(int j=0; j <length; j++){
-        //         for(int k=1; k<length; k++) {
-        //             if (ch[j] == ch[k]){
-                        
-        //             }
-        //         }
-                
-        //     }
-        //     System.out.println(true);
-        // }
-
-    
-        // else 
-        //   System.out.println("false");
-
+        System.out.println(stacky.isEmpty());
+          
     }
-    
 }
+
+// reference: https://www.hackerrank.com/challenges/java-stack/forum 
