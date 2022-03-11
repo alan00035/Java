@@ -1,7 +1,7 @@
 import java.util.*;
 
 
-public class javaArraylist {
+public class arraylist {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int arrayListNum = input.nextInt();

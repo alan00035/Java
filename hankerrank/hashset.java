@@ -1,6 +1,6 @@
 import java.util.HashSet;
 
-public class javaHashset {
+public class hashset {
     
 
     public static void main(String[] args) {

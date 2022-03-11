@@ -2,7 +2,7 @@ import java.util.Stack;
 
 import javax.lang.model.util.ElementScanner6;
 
-public class javaStack {
+public class stack {
     public static void main(String[] args) {
         String a = "({(){}()})()({(){}()})(){()}"; //true
         String b = "(({()})))";  //false
