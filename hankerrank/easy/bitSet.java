@@ -26,7 +26,7 @@ public class bitSet {
               
             System.out.println(set1.cardinality()+ " " +set2.cardinality());
         }
-        
+        input.close();
     }
 
     

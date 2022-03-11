@@ -4,8 +4,6 @@ import java.util.*;
 class Student{}
 class Rockstar{   }
 class Hacker{}
-
-
 public class instanceofKeyword{
 	
    static String count(ArrayList mylist){
