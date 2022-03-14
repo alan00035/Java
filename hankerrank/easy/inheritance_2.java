@@ -1,3 +1,4 @@
+package easy;
 interface att{
     int divisor_sum(int n);
 }

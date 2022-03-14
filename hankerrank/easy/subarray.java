@@ -1,3 +1,4 @@
+package hankerrank.easy;
 import java.util.*;
 
 
