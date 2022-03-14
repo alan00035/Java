@@ -6,9 +6,7 @@ public class simpleAddition {
             int sum =0;
             for(int i:args){
                 sum +=i;
-    
             }
-            // for(int  i=0; i<args.length; i++ )
         }
     }
     
