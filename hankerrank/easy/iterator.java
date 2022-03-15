@@ -1,4 +1,4 @@
-package easy;
+package hankerrank.easy;
 import java.util.*;
 public class iterator{
 	

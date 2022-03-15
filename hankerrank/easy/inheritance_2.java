@@ -1,4 +1,4 @@
-package easy;
+package hankerrank.easy;
 interface att{
     int divisor_sum(int n);
 }

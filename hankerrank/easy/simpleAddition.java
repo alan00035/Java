@@ -1,3 +1,4 @@
+package hankerrank.easy;
 
 public class simpleAddition {
 
