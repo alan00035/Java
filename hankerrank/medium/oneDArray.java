@@ -36,8 +36,16 @@ public class oneDArray {
         }
         if(leap > gap){
          for(int i =0; i<length; i++){
-            if(game[i]==0 && (i+leap) < length && game[i+leap]==0){return true;}
-            if(game[i]==0 && (i+leap) >= length && game[i+leap-length+1]==0 ){ return true; }
+            if((i+leap) < length && game[i]==0 && game[i+leap]==0){return true;}
+            if((i+leap) >= length && game[i]==0 && game[i+leap-length]==0 ){ 
+                
+                System.out.println(i + "========");
+                return true; 
+            }
+            // else 
+            // System.out.println(i);
+            // return false;
+
             // if(game[i]==0 && (i+leap) >= length && game[i+leap-length+1] ==1) {return false;}
                 // else
                     // System.out.println(i+"=========");
@@ -64,8 +72,9 @@ public class oneDArray {
         //     for (int i = 0; i < n; i++) {
         //         game[i] = scan.nextInt();
         //     }
-        int leap =6;
-        int[] game ={0 ,0 ,1 ,1 ,0 ,0 ,1 ,1 ,0, 0,};
+        int leap =5;
+        int[] game ={0,0,0,1,1,1};
+        // int[] game ={0 ,0 ,1 ,1 ,0 ,0 ,1 ,1 ,0, 0,};
             // System.out.println( (canWin(leap, game)) ? "YES" : "NO" );
             System.out.println(canWin(leap, game));
         // }
