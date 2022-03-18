@@ -1,4 +1,4 @@
-package hankerrank.medium;
+
 import java.util.*;
 
 import hankerrank.easy.reflection;
@@ -36,15 +36,15 @@ public class oneDArray {
         }
         if(leap > gap){
          for(int i =0; i<length; i++){
-            if((i+leap) < length && game[i]==0 && game[i+leap]==0){return true;}
-            if((i+leap) >= length && game[i]==0 && game[i+leap-length]==0 ){ 
-                
+            if((i+leap) < length && game[i]==0 && game[i+leap]==0)
+                return true;
+            if((i+leap) >= length && game[i]==0 && game[i+leap-length]==0)             
                 System.out.println(i + "========");
                 return true; 
-            }
+    
             // else 
-            // System.out.println(i);
-            // return false;
+            //     // System.out.println(i);
+            //     return false;
 
             // if(game[i]==0 && (i+leap) >= length && game[i+leap-length+1] ==1) {return false;}
                 // else
@@ -83,3 +83,5 @@ public class oneDArray {
 }
 
 // https://www.hackerrank.com/challenges/java-1d-array/problem?isFullScreen=true
+
+// https://github.com/egalli64/jexol/blob/master/src/main/java/hr/dataStructure/d1Array2/Solution.java
