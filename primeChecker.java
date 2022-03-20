@@ -5,19 +5,20 @@ import static java.lang.System.in;
 class checker{
 
     void check (int ... i ){
-
+    
 
         for (int a : i)
-            if(a==2 || (a%2 !=0 && a >=2) || ( !squareCheck(a)) ){
+            if(a>=2 && squareCheck(a)){
+            // if(squareCheck(a)){
                 System.out.print(a + " ");
         }
         System.out.println();
     }
 
     boolean squareCheck(int a){
-        for(int i =3; i <= Math.sqrt(a); i++)
+        for(int i =2; i <= Math.sqrt(a); i++)
             if(a%i ==0)
-             return false;
+             return false; // is perfectly divided, is not primry number
         return true;
     }
 }
@@ -28,10 +29,10 @@ public class primeChecker{
 
         checker ch = new checker();
 
-        int[] a ={2,9,45,7,6};
-        ch.check(a);    
-        
-        
+        // int[] a ={2,9,45,7,6};
+        // ch.check(a);    
+
+        System.out.println(ch.squareCheck(1));
         
     }
 }
