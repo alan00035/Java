@@ -1,3 +1,4 @@
+package hankerrank.medium;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import static java.lang.System.in;
