@@ -68,13 +68,13 @@ class Priorities {
           
         });
     
-        for(String str: events){
-            String[] array = str.split(" ");
-            if(!array[0].equals("SERVED"))
-                queue.add(new Student(Integer.parseInt(array[3]),array[1],Double.parseDouble(array[2]))); 
+    //     for(String str: events){
+    //         String[] array = str.split(" ");
+    //         if(!array[0].equals("SERVED"))
+    //             queue.add(new Student(Integer.parseInt(array[3]),array[1],Double.parseDouble(array[2]))); 
          
-    }
-     return null;
+    // }
+    //  return null;
 }
 }
 
