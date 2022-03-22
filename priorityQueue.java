@@ -49,14 +49,30 @@ class Student{
 
 class Priorities {
     List<Student> getStudents(List<String> events){
-        PriorityQueue<Student> queue = new PriorityQueue<>();
-        Student student;
-        String[] array = new String[3];
+        PriorityQueue<Student> queue = new PriorityQueue<>(new Comparator<Student>() {
 
-           for(String str: events){
-                array = str.split(" ");
-                if(!array[0].equals("SERVED"))
-                    queue.add(new Student(Integer.parseInt(array[3]),array[1],Double.parseDouble(array[2]))); 
+            @Override
+            public int compare(Student o1, Student o2) {
+                if(o1.getCgpa() < o2.getCgpa()) return 1;
+                if(o1.getCgpa() > o2.getCgpa()) return -1;
+                else {
+                    if( o1.getName().compareTo(o2.getName()) == 0)
+                        if(o1.getId() > o2.getId()) return 1;
+                        else if (o1.getId() < o2.getId()) return -1;
+                        else return 0;
+                    else 
+                        return o1.getName().compareTo(o2.getName());    
+                }
+
+            }
+          
+        });
+    
+        for(String str: events){
+            String[] array = str.split(" ");
+            if(!array[0].equals("SERVED"))
+                queue.add(new Student(Integer.parseInt(array[3]),array[1],Double.parseDouble(array[2]))); 
+         
     }
      return null;
 }
