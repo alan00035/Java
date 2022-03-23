@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.*;
 
 class Student{
@@ -51,36 +53,40 @@ class Student{
 class Priorities {
     
     List<Student> getStudents(List<String> events){
-        
-      priorityQueue<Student> queue = new priorityQueue<>(new Comparator<Student>() {
-          @Override
-          public int compare(Student s1, Student s2){
-              if(s1.getCgpa() < s2.getCgpa()){
-                  return 1;    
-              }
-              else if(s1.getCgpa() > s2.getCgpa()){
-                  return -1;
-              }
-              else{
-                  if(s1.getName().compareTo(s2.getName())==0){
-                      if(s1.getId() > s2.getId()){
-                          return 1;
-                      }
-                      else if(s1.getId() < s2.getId()){
-                          return -1;
-                      }
-                      else{
-                          return 0;
-                      }
+        // java8 version
+      PriorityQueue<Student> queue = new PriorityQueue<>(Comparator.comparing(Student :: getCgpa).reversed()
+                                                                   .thenComparing(Student::getName)
+                                                                   .thenComparing(Student::getId) );     
+
+    //   priorityQueue<Student> queue = new priorityQueue<>(new Comparator<Student>() {
+    //       @Override
+    //       public int compare(Student s1, Student s2){
+    //           if(s1.getCgpa() < s2.getCgpa()){
+    //               return 1;    
+    //           }
+    //           else if(s1.getCgpa() > s2.getCgpa()){
+    //               return -1;
+    //           }
+    //           else{
+    //               if(s1.getName().compareTo(s2.getName())==0){
+    //                   if(s1.getId() > s2.getId()){
+    //                       return 1;
+    //                   }
+    //                   else if(s1.getId() < s2.getId()){
+    //                       return -1;
+    //                   }
+    //                   else{
+    //                       return 0;
+    //                   }
                       
-                  }else {
-                      return s1.getName().compareTo(s2.getName());
-                  }
-              }
+    //               }else {
+    //                   return s1.getName().compareTo(s2.getName());
+    //               }
+    //           }
 
-          }
+    //       }
 
-      });
+    //   });
       
         for(String str: events){
             String[] array = str.split(" ");
@@ -103,22 +109,27 @@ public class priorityQueue {
     private final static Priorities priorities = new Priorities();
     
     public static void main(String[] args) {
-        int totalEvents = Integer.parseInt(scan.nextLine());    
-        List<String> events = new ArrayList<>();
+
+        BigDecimal a = new BigDecimal("3");
+        BigDecimal b= new BigDecimal("9");
         
-        while (totalEvents-- != 0) {
-            String event = scan.nextLine();
-            events.add(event);
-        }
+        System.out.println(a.compareTo(b));
+    //     int totalEvents = Integer.parseInt(scan.nextLine());    
+    //     List<String> events = new ArrayList<>();
         
-        List<Student> students = priorities.getStudents(events);
+    //     while (totalEvents-- != 0) {
+    //         String event = scan.nextLine();
+    //         events.add(event);
+    //     }
         
-        if (students.isEmpty()) {
-            System.out.println("EMPTY");
-        } else {
-            for (Student st: students) {
-                System.out.println(st.getName());
-            }
-        }
+    //     List<Student> students = priorities.getStudents(events);
+        
+    //     if (students.isEmpty()) {
+    //         System.out.println("EMPTY");
+    //     } else {
+    //         for (Student st: students) {
+    //             System.out.println(st.getName());
+    //         }
+    //     }
     }
 }
