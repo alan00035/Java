@@ -1,7 +1,7 @@
-import java.util.*;
-import java.util.Comparator;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.PriorityQueue;
+import java.util.Scanner;
+import java.util.*;
 
 class Student{
     int id;  String name;  double cgpa;
@@ -43,65 +43,82 @@ class Student{
 
         return super.toString();
     }
+    
+
 
 }
-
 
 class Priorities {
-    List<Student> getStudents(List<String> events){
-        PriorityQueue<Student> queue = new PriorityQueue<>(new Comparator<Student>() {
-
-            @Override
-            public int compare(Student o1, Student o2) {
-                if(o1.getCgpa() < o2.getCgpa()) return 1;
-                if(o1.getCgpa() > o2.getCgpa()) return -1;
-                else {
-                    if( o1.getName().compareTo(o2.getName()) == 0)
-                        if(o1.getId() > o2.getId()) return 1;
-                        else if (o1.getId() < o2.getId()) return -1;
-                        // else return 0;
-                    else 
-                        return o1.getName().compareTo(o2.getName());    
-                }
-
-            }
-          
-        });
     
-    //     for(String str: events){
-    //         String[] array = str.split(" ");
-    //         if(!array[0].equals("SERVED"))
-    //             queue.add(new Student(Integer.parseInt(array[3]),array[1],Double.parseDouble(array[2]))); 
-         
-    // }
-    //  return null;
-}
+    List<Student> getStudents(List<String> events){
+        
+      priorityQueue<Student> queue = new priorityQueue<>(new Comparator<Student>() {
+          @Override
+          public int compare(Student s1, Student s2){
+              if(s1.getCgpa() < s2.getCgpa()){
+                  return 1;    
+              }
+              else if(s1.getCgpa() > s2.getCgpa()){
+                  return -1;
+              }
+              else{
+                  if(s1.getName().compareTo(s2.getName())==0){
+                      if(s1.getId() > s2.getId()){
+                          return 1;
+                      }
+                      else if(s1.getId() < s2.getId()){
+                          return -1;
+                      }
+                      else{
+                          return 0;
+                      }
+                      
+                  }else {
+                      return s1.getName().compareTo(s2.getName());
+                  }
+              }
+
+          }
+
+      });
+      
+        for(String str: events){
+            String[] array = str.split(" ");
+            String order = array[0];
+            switch(order){
+                case "ENTER": queue.add(new Student(Integer.parseInt(array[3]),array[1],Double.parseDouble(array[2])));
+                       continue;        
+                case "SERVED":  queue.poll();             
+                       continue;     
+            }
+
+        }     
+        return new ArrayList(queue);  
+        
+    }
 }
 
 public class priorityQueue {
-    // private final static Scanner scan = new Scanner(System.in);
+    private final static Scanner scan = new Scanner(System.in);
     private final static Priorities priorities = new Priorities();
     
     public static void main(String[] args) {
-        // int totalEvents = Integer.parseInt(scan.nextLine());    
-        // List<String> events = new ArrayList<>();
+        int totalEvents = Integer.parseInt(scan.nextLine());    
+        List<String> events = new ArrayList<>();
         
-        // while (totalEvents-- != 0) {
-        //     String event = scan.nextLine();
-        //     events.add(event);
-        // }
+        while (totalEvents-- != 0) {
+            String event = scan.nextLine();
+            events.add(event);
+        }
         
-        // List<Student> students = priorities.getStudents(events);
+        List<Student> students = priorities.getStudents(events);
         
-    //     if (students.isEmpty()) {
-    //         System.out.println("EMPTY");
-    //     } else {
-    //         for (Student st: students) {
-    //             System.out.println(st.getName());
-    //         }
-    //     }
-    // }
+        if (students.isEmpty()) {
+            System.out.println("EMPTY");
+        } else {
+            for (Student st: students) {
+                System.out.println(st.getName());
+            }
+        }
+    }
 }
-
-
-// https://www.hackerrank.com/challenges/java-priority-queue/problem?isFullScreen=true
