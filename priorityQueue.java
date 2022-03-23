@@ -59,7 +59,7 @@ class Priorities {
                     if( o1.getName().compareTo(o2.getName()) == 0)
                         if(o1.getId() > o2.getId()) return 1;
                         else if (o1.getId() < o2.getId()) return -1;
-                        else return 0;
+                        // else return 0;
                     else 
                         return o1.getName().compareTo(o2.getName());    
                 }
