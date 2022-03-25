@@ -43,7 +43,6 @@ public class sort
 		List<Student> studentList = new ArrayList<Student>();
         // int testCases = studentList.size();
         
-        
 		while(testCases>0){
 			int id = in.nextInt();
 			String fname = in.next();
