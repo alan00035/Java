@@ -12,7 +12,7 @@ import java.util.*;
 
 class FamilyMember {
 	// ~~Complete this line~~
-	@FamilyBudget(userRole = "Senior", moneySpend = 100)
+	@FamilyBudget(userRole = "SENIOR", moneySpend = 100)
 	public void seniorMember(int budget, int moneySpend) {
 		System.out.println("Senior Member");
 		System.out.println("Spend: " + moneySpend);
@@ -20,7 +20,7 @@ class FamilyMember {
 	}
 
 	// ~~Complete this line~~
-	@FamilyBudget(userRole = "Junior", moneySpend = 50)
+	@FamilyBudget(userRole = "JUNIOR", moneySpend = 50)
 	public void juniorUser(int budget, int moneySpend) {
 		System.out.println("Junior Member");
 		System.out.println("Spend: " + moneySpend);
