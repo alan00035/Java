@@ -1,3 +1,4 @@
+package hankerrank.medium;
 import java.lang.annotation.*;
 import java.lang.reflect.*;
 import java.util.*;
@@ -45,7 +46,7 @@ public class annotations {
 						String userRole = family.userRole();
 						int budgetLimit = family.moneySpend();
 						if (userRole.equals(role)) {
-							if(budgetLimit > spend){
+							if(budgetLimit !=0 ){
 								method.invoke(FamilyMember.class.newInstance(),
 										budgetLimit, spend);
 							}else{
