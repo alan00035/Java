@@ -45,7 +45,7 @@ public class annotations {
 						String userRole = family.userRole();
 						int budgetLimit = family.moneySpend();
 						if (userRole.equals(role)) {
-							if(budgetLimit > 0){
+							if(budgetLimit > spend){
 								method.invoke(FamilyMember.class.newInstance(),
 										budgetLimit, spend);
 							}else{
