@@ -27,14 +27,16 @@ public class lambda {
                 int check = Integer.parseInt(token.nextToken());
                 int num = Integer.parseInt(token.nextToken());
             if(check ==1){
-                checkOdd co =(int i) -> { i%2 !=0};
+                checkOdd co =(int i) -> i%2 !=0 ;
                 System.out.println(co.isOdd( num) ? "ODD" : "EVEN");
                 
             }else if(check ==2){
-                checkPrime cp = (int i) -> {new BigInteger(String.valueOf(i)).isProbablePrime(1);
-                System.out.println(cp.isPrime( num) ? "PRIME" : "COMPOSITE"); } 
+                checkPrime cp = (int i) -> new BigInteger(String.valueOf(i)).isProbablePrime(1);
+                System.out.println(cp.isPrime( num) ? "PRIME" : "COMPOSITE"); 
             }else {
-                
+                checkPalindrome cpd = (int i) -> Integer.parseInt((new StringBuilder(i+"")).reverse().toString())==i ; 
+
+                System.out.println(cpd.isPalindrome(num) ? "PALINDROME":"Not PALINDROME");
             }
             
         }
@@ -44,27 +46,6 @@ public class lambda {
 
 }
 
-class method1 implements functionLambda{
-
-    @Override
-    public boolean isOdd() {
-        // TODO Auto-generated method stub
-        return false;
-    }
-
-    @Override
-    public boolean isPrime() {
-        // TODO Auto-generated method stub
-        return false;
-    }
-
-    @Override
-    public boolean isPalindrome() {
-        // TODO Auto-generated method stub
-        return false;
-    }
-    
-}
 
 
 // https://www.hackerrank.com/challenges/java-lambda-expressions/problem?isFullScreen=true&h_r=next-challenge&h_v=zen
