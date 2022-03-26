@@ -36,7 +36,7 @@ public class lambda {
             }else {
                 checkPalindrome cpd = (int i) -> Integer.parseInt((new StringBuilder(i+"")).reverse().toString())==i ; 
 
-                System.out.println(cpd.isPalindrome(num) ? "PALINDROME":"Not PALINDROME");
+                System.out.println(cpd.isPalindrome(num) ? "PALINDROME":"NOT PALINDROME");
             }
             
         }
