@@ -3,7 +3,7 @@ import java.io.BufferedReader;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class md5Hashing {
+public class hashing_md5 {
      
 
     public static void main(String[] args) {
@@ -36,3 +36,5 @@ public class md5Hashing {
 
 
 // https://www.hackerrank.com/challenges/java-md5/problem?isFullScreen=true&h_r=next-challenge&h_v=zen
+
+// reference : https://mkyong.com/java/java-md5-hashing-example/
