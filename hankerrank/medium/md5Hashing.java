@@ -1,8 +1,9 @@
 package hankerrank.medium;
+import java.io.BufferedReader;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class mdsHashing {
+public class md5Hashing {
      
 
     public static void main(String[] args) {
