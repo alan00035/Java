@@ -1,17 +1,12 @@
-package node;
-import node.Node;
-
-public class _binaryTreeEx {
+public class binaryTreeEx {
     public static void main(String[] args) {
-        BinaryTree bt = new BinaryTree();
-        bt.addValue(6);
-        bt.addValue(4);
-        bt.addValue(5);
-        bt.addValue(8);
-        bt.addValue(1);
-        bt.addValue(9);
-
-        System.out.println();
+        BinaryTree b = new BinaryTree();
+        b = b.creation();
+        
+        for(Node n : b){
+            System.out.println(n.getValue());
+        }
+  
     }
 }
 
@@ -36,6 +31,18 @@ class BinaryTree{
 
     public void addValue(int value){
         addRecursive(root, value);
+    }
+
+    public BinaryTree creation(){
+        BinaryTree bt = new BinaryTree();
+        bt.addValue(6);
+        bt.addValue(4);
+        bt.addValue(5);
+        bt.addValue(8);
+        bt.addValue(1);
+        bt.addValue(9);
+
+        return bt;
     }
 }
 

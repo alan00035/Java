@@ -20,25 +20,16 @@ public class Node<T>{
 
 
     //  use arraylist to get neghbours node
+    public Node[] getNeigbors(){
+        return neigbors.toArray(new Node[0]);
 
-    
+    }
 
-    // public Node getNext() {
-    //     return this.next;
-    // }
-
-    // public void setNext(Node next) {
-    //     this.next = next;
-    // }
-
-    // public Node(T data, Node nx){
-    //     this.data = data;
-    //     this.next = nx;
-    // }
-
-
-    
-
+    public void setNeigbors(Node[] d){
+        for(Node i : d){
+            neigbors.add(i);
+        }
+    }
 
 
 }
