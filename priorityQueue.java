@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+import javax.management.Query;
+
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.util.*;
 
 class Student{
@@ -53,55 +55,45 @@ class Student{
 class Priorities {
     
     List<Student> getStudents(List<String> events){
-        // java8 version
-      PriorityQueue<Student> queue = new PriorityQueue<>(Comparator.comparing(Student :: getCgpa).reversed()
-                                                                   .thenComparing(Student::getName)
-                                                                   .thenComparing(Student::getId) );     
 
-    //   priorityQueue<Student> queue = new priorityQueue<>(new Comparator<Student>() {
-    //       @Override
-    //       public int compare(Student s1, Student s2){
-    //           if(s1.getCgpa() < s2.getCgpa()){
-    //               return 1;    
-    //           }
-    //           else if(s1.getCgpa() > s2.getCgpa()){
-    //               return -1;
-    //           }
-    //           else{
-    //               if(s1.getName().compareTo(s2.getName())==0){
-    //                   if(s1.getId() > s2.getId()){
-    //                       return 1;
-    //                   }
-    //                   else if(s1.getId() < s2.getId()){
-    //                       return -1;
-    //                   }
-    //                   else{
-    //                       return 0;
-    //                   }
-                      
-    //               }else {
-    //                   return s1.getName().compareTo(s2.getName());
-    //               }
-    //           }
-
-    //       }
-
-    //   });
       
-        for(String str: events){
-            String[] array = str.split(" ");
-            String order = array[0];
-            switch(order){
-                case "ENTER": queue.add(new Student(Integer.parseInt(array[3]),array[1],Double.parseDouble(array[2])));
-                       continue;        
-                case "SERVED":  queue.poll();             
-                       continue;     
+        
+        Comparator compare = new Comparator<Student>() {
+
+            @Override
+            public int compare(Student s1, Student s2) {
+                if(s1.getCgpa() > s2.getCgpa()){
+                    return -1;
+                }else if(s1.getCgpa()< s2.getCgpa()){
+                    return 1;
+                }else{
+                    if(s1.getName().compareTo(s2.getName())== 0)
+                        return s1.getId() >s2.getId() ? 1:-1;
+                    else
+                        return s1.getName().compareTo(s2.getName());    
+                }
             }
 
-        }     
-        return new ArrayList(queue);  
-        
+        };
+
+        PriorityQueue pq = new PriorityQueue<Student>(compare);
+
+        for(String str : events){
+            String[] arr = str.split(" ");
+            String order = arr[0];
+            switch(order){
+                case "ENTER": pq.add(new Student(Integer.parseInt(arr[3]), arr[1], Double.parseDouble(arr[2]));continue;
+            
+                case "SERVED": pq.poll(); 
+            }
+        }
+
+        return null;
+          
+    
     }
+        
+
 }
 
 public class priorityQueue {
