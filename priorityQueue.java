@@ -76,19 +76,24 @@ class Priorities {
 
         };
 
-        PriorityQueue pq = new PriorityQueue<Student>(compare);
+        PriorityQueue<Student> pq = new PriorityQueue<Student>(compare);
 
         for(String str : events){
             String[] arr = str.split(" ");
             String order = arr[0];
             switch(order){
-                case "ENTER": pq.add(new Student(Integer.parseInt(arr[3]), arr[1], Double.parseDouble(arr[2]));continue;
+                case "ENTER": pq.add(new Student(Integer.parseInt(arr[3]), arr[1], Double.parseDouble(arr[2])));continue;
             
                 case "SERVED": pq.poll();
             }
         }
-        return null;
+        
+        List<Student> list = new ArrayList<>();
+        for(Student s : pq){
+            list.add(new Student(s.getId(), s.getName(), s.getCgpa()));
+        }
           
+        return list;
     
     }
         
