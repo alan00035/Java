@@ -84,16 +84,22 @@ class Priorities {
             switch(order){
                 case "ENTER": pq.add(new Student(Integer.parseInt(arr[3]), arr[1], Double.parseDouble(arr[2])));continue;
             
-                case "SERVED": pq.poll();
+                case "SERVED": while(!pq.isEmpty()) pq.poll();
             }
         }
         
-        List<Student> list = new ArrayList<>();
-        for(Student s : pq){
-            list.add(new Student(s.getId(), s.getName(), s.getCgpa()));
+        // List<Student> list = new ArrayList<>();
+// this part is important, priority queue return iterator randomly, need to pull and print at the time//
+        while(pq.size()>1){
+            System.out.println(pq.poll().name);
         }
+
+        return new ArrayList<Student>(pq);
+        // for(Student s : pq){
+        //     list.add(new Student(s.getId(), s.getName(), s.getCgpa()));
+        // }
           
-        return list;
+        // return list;
     
     }
         
