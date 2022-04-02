@@ -84,10 +84,9 @@ class Priorities {
             switch(order){
                 case "ENTER": pq.add(new Student(Integer.parseInt(arr[3]), arr[1], Double.parseDouble(arr[2]));continue;
             
-                case "SERVED": pq.poll(); 
+                case "SERVED": pq.poll();
             }
         }
-
         return null;
           
     
