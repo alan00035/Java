@@ -1,3 +1,4 @@
+package hankerrank.medium;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -89,7 +90,7 @@ class Priorities {
         }
         
         // List<Student> list = new ArrayList<>();
-// this part is important, priority queue return iterator randomly, need to pull and print at the time//
+// this part is important, priority queue return iterator randomly, need to pull and print at the time and make sure the queue is not empty
         while(pq.size()>1){
             System.out.println(pq.poll().name);
         }
