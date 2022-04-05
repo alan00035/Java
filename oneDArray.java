@@ -16,12 +16,14 @@ class game{
     boolean playGame(int[] arr, int gameSize, int leap){
         int index =0;
 
+        
         for(int i =0; i<gameSize; i++){
-            if(arr[i] ==0) 
-                if (arr[i+leap] ==0)
-                    return true;
-                else if(Math.abs(arr[i+leap-gameSize]) ==0)
-                    return true;
+            if(i+leap < gameSize && arr[i]==0 && arr[i+leap]==0)
+                return true;
+            if(i+leap >= gameSize)    
+                if(arr[i] ==0) 
+                    if (arr[ Math.abs(i+leap-gameSize)] ==0 )
+                        return true;
             else    
                 return false;
         }
