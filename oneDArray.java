@@ -13,9 +13,8 @@ public class oneDArray {
 }
 
 class game{
-    boolean playGame(int[] arr, int gameSize, int leap){
+    static boolean playGame(int[] arr, int gameSize, int leap){
         int index =0;
-
         
         for(int i =0; i<gameSize; i++){
             if(i+leap < gameSize && arr[i]==0 && arr[i+leap]==0)
