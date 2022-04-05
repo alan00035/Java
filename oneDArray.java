@@ -16,7 +16,7 @@ class game{
     boolean playGame(int[] arr, int gameSize, int leap){
         int index =0;
 
-        for(int i =gameSize-1; i>0; i--){
+        for(int i =0; i<gameSize; i++){
             if(arr[i] ==0) 
                 if (arr[i+leap] ==0)
                     return true;
