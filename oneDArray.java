@@ -1,33 +1,46 @@
-public class oneDArray {
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
     public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */ 
+        Scanner scan = new Scanner(System.in);
+        int q = scan.nextInt();
+        while (q-- > 0) {
+            int n = scan.nextInt();
+            int leap = scan.nextInt();
+            
+            int[] game = new int[n];
+            for (int i = 0; i < n; i++) {
+                game[i] = scan.nextInt();
+            }
 
-        int[] arr1 = {0 ,0 ,0, 0, 0};  //5 3
-        int[] arr2 = {0 ,0 ,0, 1,1,1}; // 6 5
-        int[] arr3 = {0 ,0 ,1,1,1, 0};   // 6 3
-        int[] arr4 = {0 ,1 ,0}; // 3 1
-
-        game g = new game();
-       System.out.println(g.playGame(arr2, 6, 5));
-
-     }
-}
-
-class game{
-    static boolean playGame(int[] arr, int gameSize, int leap){
-        int index =0;
-        
-        for(int i =0; i<gameSize; i++){
-            if(i+leap < gameSize && arr[i]==0 && arr[i+leap]==0)
-                return true;
-            if(i+leap >= gameSize)    
-                if(arr[i] ==0) 
-                    if (arr[ Math.abs(i+leap-gameSize)] ==0 )
-                        return true;
-            else    
-                return false;
+            System.out.println( (canWin(leap, game)) ? "YES" : "NO" );
+            // System.out.println(canWin(leap, game));
         }
-        
-        return true;
+        scan.close();
+  
     }
-}
+        
+    public static boolean canWin(int leap, int[] game) {
+        return isSolvable(leap, game, 0);
+    }
+
+    private static boolean isSolvable(int leap, int[] game, int i) {
+        // Base Cases
+        if (i >= game.length) {
+            return true;
+        } else if (i < 0 || game[i] == 1) {
+            return false;
+        }
+                
+        game[i] = 1; // marks as visited
+
+        // Recursive Cases
+        return isSolvable(leap, game, i + leap) || 
+            isSolvable(leap, game, i + 1) || 
+            isSolvable(leap, game, i - 1);
+    }
+}                                                           
 
