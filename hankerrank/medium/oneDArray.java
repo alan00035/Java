@@ -1,3 +1,4 @@
+package hankerrank.medium;
 import java.io.*;
 import java.util.*;
 
