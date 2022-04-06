@@ -1,3 +1,4 @@
+package problemSolving;
 public class appleAndOrange {
     public static void main(String[] args) {
         
