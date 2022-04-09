@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 public class breakingTheRecords {
 
     public static void main(String[] args) throws IOException {
-        int highScore =0, lowScore=0;
+        int counthigh=0, countlow=0;
 
         // BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         // int length = Integer.parseInt(bf.readLine().trim()));
@@ -22,8 +22,27 @@ public class breakingTheRecords {
         for(int i:arr){
             score.add(i);
         }
+        int high =score.get(0);  //store in a seperate int
+        int low = score.get(0);
+        
+        for(int i=1; i< length; i++){
+                  
+                  if(high < score.get(i)){
+                        
+                        high = score.get(i);
+                        counthigh ++;
+                          }
+                  if(low >score.get(i)){
+                       low = score.get(i);
+                       countlow ++;
+                  }
+                              
+                    
+              
+                }
+            
+                System.out.println(counthigh + " " + countlow);
 
-        System.out.println(score);
 
     }
     
