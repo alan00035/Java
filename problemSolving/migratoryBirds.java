@@ -1,11 +1,11 @@
+package problemSolving;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
-
-import hankerrank.easy.list;
 
 public class migratoryBirds {
     public static void main(String[] args) {
@@ -41,30 +41,8 @@ public class migratoryBirds {
         }  
          System.out.println(list.get(0));
 
-        // int count1=0, count2=0 ,count3=0, count4=0,count5 =0;
-        // List<Integer> list = new ArrayList();
-
-        // for(int i : arr){
-        //     switch(i){
-        //         case 1: count1++; break;
-        //         case 2: count2++; break;
-        //         case 3: count3++; break;
-        //         case 4: count4++; break;
-        //         case 5: count5++; break;
-                
-        //     }
-
-        // }
-
-        // list.add(count1);
-        // list.add(count2);
-        // list.add(count3);
-        // list.add(count4);
-        // list.add(count5);
-
-        
-
-        // System.out.println(Collections.max(list));
+        // int key = Collections.max(hm.entrySet(), Map.Entry.comparingByValue()).getKey();
+        // System.out.println(key);
         
         
     }
