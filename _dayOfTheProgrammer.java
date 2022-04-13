@@ -7,7 +7,7 @@ import java.util.List;
 
 import javax.swing.text.DateFormatter;
 
-public class dayOfTheProgrammer {
+public class _dayOfTheProgrammer {
     public static void main(String[] args) {
         int year = 2017;
    
