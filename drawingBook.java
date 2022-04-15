@@ -7,19 +7,19 @@ public class drawingBook {
 
 
         int back =0;
-        int front =Math.abs((p-2)/2);
+        int front =Math.abs((n-1-p)/2);
 
-        if (p ==1 || p ==n)
+        if (p ==1 || p ==n )
             System.out.println(0);
         else
             if(n%2 ==0){
+                
                 back = Math.abs((n-1-p)/2);
                 System.out.println(front>back ? back:front);
             }
             else
                 back = Math.abs((n-p)/2); 
                 System.out.println(front>back ? back:front);
-
 
     }   
 }
