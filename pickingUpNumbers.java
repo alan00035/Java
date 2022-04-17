@@ -6,12 +6,17 @@ import hankerrank.easy.list;
 
 public class pickingUpNumbers {
     public static void main(String[] args) {
-        int [] arr = {4 ,6 ,5 ,3, 3, 1};
+        int [] arr = {1 ,3 ,3 ,4 ,5 ,6};
         
         List<Integer> sublist = new ArrayList<>();
 
         Arrays.sort(arr);
 
+        List<Integer> sum = new ArrayList<>();
+
+        int count =0;
+
+     
     }
         
 }
