@@ -1,3 +1,4 @@
+package problemSolving;
 import java.util.Stack;
 
 public class countingValleys {
@@ -11,19 +12,14 @@ public class countingValleys {
         Stack<Character> stacks = new Stack<Character>();
 
         int count =0;
+        int v=0;
+        for(char ch: c){
+            if(ch =='U') count++;
+            if(ch == 'D') count--;
+            if(count ==0 && ch =='U') v++;
 
-        for(int i =0; i< steps; i++){
-            stacks.add(c[i]);
-            if(c[0] == 'U'){
-           
-            }
-            else if(c[0] == 'D'){
-                if(c[i]=='U' && c[i+1] =='D' )
-                 count++;
-            }
         }
-
-        System.out.println(count);
+        System.out.println(v);
             
 
 

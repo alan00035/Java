@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class betweenTwoSets {
+public class _betweenTwoSets {
     public static void main(String[] args) {
         int[] a ={2,6};
         int[] b ={24,36};
