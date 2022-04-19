@@ -1,10 +1,7 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map.Entry;
-
-import hankerrank.easy.list;
 
 public class pickingUpNumbers {
     public static void main(String[] args) {
