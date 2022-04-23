@@ -1,3 +1,4 @@
+package problemSolving;
 public class viral_advertising {
     public static void main(String[] args) {
         int n = 5;
