@@ -10,7 +10,7 @@ import hankerrank.easy.list;
 public class random {
     
     public static void main(String[] args) {
-        String str = "1 4 4 4 5 3";
+        String str = "26 94 -95 34 67 -97 17 52 1 86";
         
         String[] arr = str.split(" ");
         List<String> list = new ArrayList<>();

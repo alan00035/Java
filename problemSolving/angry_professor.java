@@ -1,3 +1,4 @@
+package problemSolving;
 public class angry_professor {
     public static void main(String[] args) {
 
