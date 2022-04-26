@@ -1,3 +1,4 @@
+package problemSolving;
 import java.io.Console;
 
 public class find_digitial {
