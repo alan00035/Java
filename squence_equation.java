@@ -11,22 +11,21 @@ public class squence_equation {
         // Integer[] a ={5,2,1,3,4};
 
 
-        // List<Integer> p = Arrays.asList(a);
-        // // List<Integer> p1 = new ArrayList<>();
-        // int[] p1 = new int[p.size()];
+        List<Integer> p = Arrays.asList(a);
+        List<Integer> p1 = new ArrayList<>();
 
-        // for(int i =0; i< p.size(); i++){
 
-        //    int j =p.indexOf(p.indexOf(i+1)+1);
-            
-        //    p1[j]= i+1;
+        for(int i =0; i< p.size(); i++){
 
-        // //    System.out.println(j);
-        // }
+           int j =p.indexOf(p.indexOf(i+1)+1)+1;
+           
+            p1.add(j);
+
+        }
         
-        // for(int i : p1){
-        //     System.out.println(i);
-        // }
+        for(int i : p1){
+            System.out.println(i);
+        }
     }
 }
 
