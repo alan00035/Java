@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class _circular_array_rotation {
+public class circular_array_rotation {
     public static void main(String[] args) {
         Integer[] arr = {3,4,5};
 
