@@ -1,3 +1,4 @@
+package problemSolving;
 public class sherlocks_and_squares {
     public static void main(String[] args) {
         int a =3;
