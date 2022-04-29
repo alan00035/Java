@@ -1,4 +1,3 @@
-package problemSolving;
 
 public class numberLineJumps {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package problemSolving;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Stack;
 
-import hankerrank.easy.list;
+
 
 
 public class elecronicsShop {

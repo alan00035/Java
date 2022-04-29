@@ -1,4 +1,4 @@
-package problemSolving;
+
 import java.util.Scanner;
 
 public class _utopian_tree {

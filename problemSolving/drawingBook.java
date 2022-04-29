@@ -1,4 +1,4 @@
-package problemSolving;
+
 public class drawingBook {
     public static void main(String[] args) {
         //page 1 is on the right, last page is on the left;

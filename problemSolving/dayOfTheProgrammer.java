@@ -1,5 +1,3 @@
-package problemSolving;
-
 
 public class dayOfTheProgrammer {
     public static void main(String[] args) {

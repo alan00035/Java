@@ -1,4 +1,4 @@
-package problemSolving;
+
 public class save_the_prisoner {
     public static void main(String[] args) {
         int n =654809340   ; //prisoners
