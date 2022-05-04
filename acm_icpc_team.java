@@ -34,7 +34,7 @@ public class acm_icpc_team{
         }
     }
 
-    // https://www.hackerrank.com/challenges/acm-icpc-team/problem?isFullScreen=true     
+// https://www.hackerrank.com/challenges/acm-icpc-team/problem?isFullScreen=true     
 
 
     // 2) runtime
