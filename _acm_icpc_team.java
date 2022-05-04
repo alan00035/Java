@@ -2,7 +2,7 @@
 import java.util.Arrays;
 import java.util.List;
 
-public class acm_icpc_team{
+public class _acm_icpc_team{
         public static void main(String[] args) {
             // String[] s={"10101","11100","11010","00101"};
             String[] s={"10101","11110","00010"};
