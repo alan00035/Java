@@ -4,7 +4,7 @@ import java.util.List;
 
 import hankerrank.easy.list;
 
-public class organizing_containers_of_balls {
+public class _organizing_containers_of_balls {
     public static void main(String[] args) {
         Integer[] a1 ={1,3,1};
         Integer[] a2 = {2,1,2};
@@ -22,19 +22,15 @@ public class organizing_containers_of_balls {
         List<Integer> typeSum = new ArrayList<>();
 
         int sum=0;
-        // for(List<Integer> list: container){
-        //     containerSum.add(list.stream().reduce(0, Integer::sum));
-            // int sum =0;
-            for(int n =0; n<container.size(); n++){
-                containerSum.add(container.get(n).stream().reduce(0, Integer::sum));
-                System.out.println(container.get(n).get(n));
-            }
-     
-               
+        //  for(int n =0 ; n<container.size() ; n++){
+        //         containerSum.add(container.get(n).stream().reduce(0, Integer::sum));
+        //     }
+        // List<Integer> sublist = container.get(n);
+    
      
         // System.out.println(containerSum);
-    }
+    
 }
 
-
+}
 // https://www.hackerrank.com/challenges/organizing-containers-of-balls/problem?isFullScreen=true
