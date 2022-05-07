@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -9,32 +8,23 @@ public class _non_divisible_subset {
         // Integer[] S={1,7,2,4};
         List<Integer> s = Arrays.asList(S);
         
-        List<Integer> newArray = new ArrayList<>();
+       int[] reminder = new int[s.size()];
 
-        // System.out.println((n+1)/2);
-        
-        
-        // for(int m=0; m<n; m++){
-        //     if(s.get(m)%k ==0){
-        //         s.remove(m);
-        //     }
-        // }
-
-        for(int q =0; q<n; q++){
-            for(int j=0; j<n && j!=q; j++){
-                if(s.get(j)%k ==0 ||s.get(q)%k ==0){
-                    System.out.println(s.get(j)+"       "+s.get(q)+"     " +s.get(j)+s.get(q) );
-
-                }
-                // if((s.get(j)+s.get(q))%k == 0){
-                //     System.out.println(s.get(j)+"       "+s.get(q)+"     " +s.get(j)+s.get(q) );
-                // }
-                 
-            }
+        for(int i: s){
+            reminder[i%k] ++;  //same as using hashset, counting total by using index
         }
-        // System.out.println(s);
 
+        //all reminder amount will between 0 to k-1;
+        int maxNumber = reminder[0] >0 ? 1:0;
 
+        for(int i =1; i<= k/2; i++){
+            if(i != k-i)
+            maxNumber += Math.max(reminder[i], reminder[k-i]);
+            else
+            maxNumber++;
+        }
+
+        System.out.println(maxNumber);
     }
 }
 
