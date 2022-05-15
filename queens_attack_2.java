@@ -6,3 +6,5 @@ public class queens_attack_2 {
 
     }
 }
+
+// https://www.hackerrank.com/challenges/queens-attack-2/problem?isFullScreen=true
