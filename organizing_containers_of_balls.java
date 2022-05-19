@@ -17,8 +17,6 @@ public class organizing_containers_of_balls {
         List<List<Integer>> container = new ArrayList<>();
 
         container.add(b1); container.add(b2); container.add(b3);
-
-    
 }
 
 }
