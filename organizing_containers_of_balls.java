@@ -4,7 +4,7 @@ import java.util.List;
 
 import hankerrank.easy.list;
 
-public class _organizing_containers_of_balls {
+public class organizing_containers_of_balls {
     public static void main(String[] args) {
         Integer[] a1 ={1,3,1};
         Integer[] a2 = {2,1,2};
@@ -18,17 +18,6 @@ public class _organizing_containers_of_balls {
 
         container.add(b1); container.add(b2); container.add(b3);
 
-        List<Integer> containerSum = new ArrayList<>();
-        List<Integer> typeSum = new ArrayList<>();
-
-        int sum=0;
-        //  for(int n =0 ; n<container.size() ; n++){
-        //         containerSum.add(container.get(n).stream().reduce(0, Integer::sum));
-        //     }
-        // List<Integer> sublist = container.get(n);
-    
-     
-        // System.out.println(containerSum);
     
 }
 
