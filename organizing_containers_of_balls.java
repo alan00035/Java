@@ -10,6 +10,7 @@ public class organizing_containers_of_balls {
         Integer[] a2 = {2,1,2};
         Integer[] a3 ={3,3,3};
 
+        
         List<Integer> b1 = Arrays.asList(a1);
         List<Integer> b2 = Arrays.asList(a2);
         List<Integer> b3 = Arrays.asList(a3);
