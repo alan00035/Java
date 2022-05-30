@@ -21,17 +21,22 @@ public class organizing_containers_of_balls {
         container.add(b1); container.add(b2); container.add(b3);
 
         // int[][] arr = new int[n][];
+        // could use multiple array 
+        // the main point here is to compare total balls in each container with each types; 
+        // swap inbetween will not change any quantity, in another words balls in each container will remind the same no matter swap or not; each container only allow one type of balls;
+
         int[] type = new int[n];
         int[] con = new int[n];
         int i,j;
         for(i=0; i< n; i++){
             for (j=0; j< n; j++){
-                type[i] += container.get(i).get(j);
+                type[i] += container.get(i).get(j);  //as the solution doesnt require swap times, only need to compare sum ;
                 con[j] +=container.get(i).get(j);
 
             }
         }
 
+        //sort out order to ascending and compare type with container 
        Arrays.sort(type); Arrays.sort(con);
 
        for(i=0; i< type.length; i++){
