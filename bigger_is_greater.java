@@ -1,29 +1,40 @@
 import javax.lang.model.util.ElementScanner6;
 
-public class bigger_is_greater {
+public class bigger_is_greater{
     public static void main(String[] args) {
-        String w = "abdc"; //acbd
-
-        char[] ch = w.toCharArray();
-        StringBuilder sb = new StringBuilder();
-       
+        String w = "a"; //acbd
+        char[] ch = w.toCharArray();       
 
         int n = w.length()-1;
 
-        String new_w = null;
+        while(n>0 && ch[n-1] >=ch[n])
+            n--;
+            if(n <2){
+                System.out.println("no answer");
+            }
+        int i = w.length()-1;    
+        while(ch[i] <=ch[n-1])
+            i--;
+        // for(i =n; i>1; i--){
+            // if(ch[i] > ch[i-1]){
+           Character temp =ch[n-1];
+            ch[n-1] = ch[i];
+            ch[i] = temp;
+                //  break;
+                // }
+        // }
 
-        int i,j;char temp=0;
-        for(i =n; i>1; i--){
-            if(ch[i] > ch[i-1]){
-                 temp =ch[i];
-                 ch[i] = ch[i-1];
-                 ch[i-1] = temp;
-                 break;
-                }
-            else{
-                continue;
+        i= w.length()-1;
+        while(n<i){
+            {
+                temp = ch[n];
+                ch[n] = ch[i];
+                ch[i] = temp;
+                n++;
+                i--;
             }
         }
+
          
       
         System.out.println(ch);
@@ -35,3 +46,5 @@ public class bigger_is_greater {
 
 
 // https://www.hackerrank.com/challenges/bigger-is-greater/problem?isFullScreen=true
+
+// explanation of lexicographical algorithm :  https://www.nayuki.io/page/next-lexicographical-permutation-algorithm
