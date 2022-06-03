@@ -9,9 +9,9 @@ public class bigger_is_greater{
 
         while(n>=1 && ch[n-1] >=ch[n])
             n--;
-            if(n <2){
-                System.out.println("no answer");
-            }
+        if(n <=0)
+            System.out.println("no answer");
+            
         int i = w.length()-1;    
         while( ch[i] <=ch[n-1])
             i--;
