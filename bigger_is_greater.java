@@ -2,27 +2,27 @@ import javax.lang.model.util.ElementScanner6;
 
 public class bigger_is_greater{
     public static void main(String[] args) {
-        String w = "a"; //zzzayybbaa
-        char[] ch = w.toCharArray();       
+        String w = "dcbb"; //zzzayybbaa
+        char[] ch = w.toCharArray();
+        Character temp =null;    
+        String ans = null;   
 
         int n = w.length()-1;
 
         while(n>=1 && ch[n-1] >=ch[n])
             n--;
         if(n <=0)
-            System.out.println("no answer");
+            ans="no answer";
             
         int i = w.length()-1;    
-        while( ch[i] <=ch[n-1])
+
+
+        while(ch[i] <=ch[n-1]) // index -1 out of bounds for length 1
             i--;
-        // for(i =n; i>1; i--){
-            // if(ch[i] > ch[i-1]){
-           Character temp =ch[n-1];
+        
+            temp =ch[n-1];
             ch[n-1] = ch[i];
             ch[i] = temp;
-                //  break;
-                // }
-        // }
 
         i= w.length()-1;
         while(n<i){
@@ -35,10 +35,10 @@ public class bigger_is_greater{
             }
         }
 
-        String ans = new String(ch);
+         ans = new String(ch);
          
-      
-        System.out.println(ch);
+
+        System.out.println(ans);
         // System.out.println("b".compareTo("d"));
 ;
     }
