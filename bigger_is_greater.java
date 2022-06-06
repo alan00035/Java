@@ -2,7 +2,7 @@ import javax.lang.model.util.ElementScanner6;
 
 public class bigger_is_greater{
     public static void main(String[] args) {
-        String w = "dcbb"; //zzzayybbaa
+        String w = "dcba"; //zzzayybbaa
         char[] ch = w.toCharArray();
         Character temp =null;    
         String ans = null;   
@@ -15,7 +15,6 @@ public class bigger_is_greater{
             ans="no answer";
             
         int i = w.length()-1;    
-
 
         while(ch[i] <=ch[n-1]) // index -1 out of bounds for length 1
             i--;
@@ -38,11 +37,12 @@ public class bigger_is_greater{
          ans = new String(ch);
          
 
+       
         System.out.println(ans);
         // System.out.println("b".compareTo("d"));
 ;
     }
-        
+
     }
 
 
