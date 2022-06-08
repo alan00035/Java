@@ -1,6 +1,8 @@
 public class happy_ladybugs {
     public static void main(String[] args) {
-        
+        String b = "RBY_YBR";
+        int length = b.length();
+        System.out.println(length);
     }
 }
 
