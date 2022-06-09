@@ -4,6 +4,7 @@ public class happy_ladybugs {
         int length = b.length();
         System.out.println(length);
         
+
     }
 }
 
