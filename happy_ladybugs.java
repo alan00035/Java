@@ -3,9 +3,10 @@ public class happy_ladybugs {
         String b = "RBY_YBR";
         int length = b.length();
         System.out.println(length);
-        
 
-    }
+        String B = "";
+
+}
 }
 
 
