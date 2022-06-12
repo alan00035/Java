@@ -2,9 +2,6 @@ package hankerrank.medium;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
-import javax.management.Query;
-
 import java.math.BigDecimal;
 import java.util.*;
 
