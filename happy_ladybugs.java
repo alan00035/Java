@@ -21,8 +21,8 @@ public class happy_ladybugs {
         }
 
         for(Entry<Character, Integer> entry : hm.entrySet())
-              if(entry.getValue().equals(1)){
-                 ;
+              if(entry.getValue().equals(1) && !entry.getKey().equals('_')){
+                System.out.println("NO");
               }
         
         
