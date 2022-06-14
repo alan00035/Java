@@ -7,8 +7,8 @@ import hankerrank.easy.list;
 
 public class happy_ladybugs {
     public static void main(String[] args) {
-        String b = "RBY_YBR";
-        int length = b.length();
+        String b = "AABCBC";
+        String result = null;
 
         ArrayList<Character> list = new ArrayList<>();
 
@@ -20,13 +20,29 @@ public class happy_ladybugs {
                 hm.put(ch, 1) ;  
         }
 
-        for(Entry<Character, Integer> entry : hm.entrySet())
-              if(entry.getValue().equals(1) && !entry.getKey().equals('_')){
-                System.out.println("NO");
-              }
-        
-        
-            
+        if(!hm.containsKey('_')){
+            int i ;
+            for(i =1; i<b.length(); i++){
+                if(b.charAt(i) != b.charAt(i-1)){
+                    result = "NO";
+                }
+                else{
+                    result ="YES";
+                }
+            }
+        }
+        else{
+            for(Entry<Character, Integer> entry : hm.entrySet()){
+                if(entry.getValue().equals(1) && !entry.getKey().equals('_')){
+                    result = "NO";
+                    break;
+                }
+                else{
+                    result = "YES";
+                }
+                }
+        } 
+        System.out.println(result);
             
 
         
