@@ -23,6 +23,8 @@ public class bigger_is_greater{
             ch[n-1] = ch[i];
             ch[i] = temp;
 
+
+            
         i= w.length()-1; 
         while(n<i){
             {
