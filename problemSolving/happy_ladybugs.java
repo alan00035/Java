@@ -8,9 +8,37 @@ public class happy_ladybugs{
     public static void main(String[] args) {
         String b = "RBY_YBR";
         int count =0;
+        String ans =null;
+        char[] counts = new char[100];
 
+        for(char c : b.toCharArray()){
+            counts[c]++;
 
         }
+
+        if(counts['_']==0){
+             ans="YES";
+            for(int i =0; i<b.length(); i++){
+                if ((i==0||b.charAt(i)!=b.charAt(i-1))&&(i==b.length()-1||b.charAt(i)!=b.charAt(i+1)))
+                ans = "NO";
+        }
+            }
+
+        else{
+            ans ="YES";
+            for (int i = 0; i < 100; i++) {
+                if (i != (int)'_' && counts[i]==1)
+                    ans = "NO";
+            }
+
+        }
+        }
+
+        
+
+        }
+
+
     
     }
 
