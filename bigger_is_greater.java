@@ -4,10 +4,11 @@ public class bigger_is_greater{
         String w = "dcba"; //zzzayybbaa
         char[] ch = w.toCharArray();
     
-;
+
     }
 
     }
+
 
 
 // https://www.hackerrank.com/challenges/bigger-is-greater/problem?isFullScreen=true
