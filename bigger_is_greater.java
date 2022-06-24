@@ -1,9 +1,23 @@
 
 public class bigger_is_greater{
     public static void main(String[] args) {
-        String w = "dcba"; //zzzayybbaa
+        String w = "dkhc"; //zzzayybbaa
         char[] ch = w.toCharArray();
     
+        for(int i =w.length()-1; i>=0; i--){
+            if(ch[i]<ch[i+1]){
+                char tmp =ch[i];
+                ch[i] = ch[i+1];
+                ch[i+1] = tmp;
+                break; 
+            }
+            
+            // else{
+                // System.out.println("no answer");
+            // }
+        }
+        System.out.println(ch);
+        
 
     }
 
