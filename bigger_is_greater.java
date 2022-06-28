@@ -10,7 +10,6 @@ public class bigger_is_greater{
                 ch[i] = ch[i+1];
                 ch[i+1] = tmp;
                 break; 
-                
             }
             
 
