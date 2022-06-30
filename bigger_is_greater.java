@@ -11,7 +11,6 @@ public class bigger_is_greater{
                 ch[i+1] = tmp;
                 break; 
             }
-            
 
             // else{
                 // System.out.println("no answer");
