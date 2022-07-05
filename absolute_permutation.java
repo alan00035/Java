@@ -4,16 +4,19 @@ public class absolute_permutation {
 
         int[] a = new int[n+1];
 
-        int i ;
-        for(i=1; i<n+1; i++){
-            if(Math.abs(a[i]-i) ==k){
-                a[i] =k+i;
-            }
+        int i,j ;
+        for(i =1; i<=n; i++){
+                a[i] = i;
+            //    if(Math.abs(a[i]-i) == k );
+            //     a[i] = k+i;
+            if(a[i]-i ==k); a[i] = k+i;
+            if(a[i]-i == -k); a[i] = i-k;
+                System.out.print(a[i]+" ");
         }
-
-        for(int j:a){
-            System.out.print(j+" ");
-        }
+        
+        // for(int m : a){
+        //     System.out.print(m+" ");
+        // }
         
 
        
