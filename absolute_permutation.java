@@ -2,21 +2,22 @@ public class absolute_permutation {
     public static void main(String[] args) {
         int n =4, k =2;
 
-        int[] a = new int[n+1];
+        int[] a = new int[n];
 
-        int i,j ;
-        for(i =1; i<=n; i++){
-                a[i] = i;
-            //    if(Math.abs(a[i]-i) == k );
-            //     a[i] = k+i;
-            if(a[i]-i ==k); a[i] = k+i;
-            if(a[i]-i == -k); a[i] = i-k;
-                System.out.print(a[i]+" ");
+        if(k>0 && n%(2*k) !=0){
+            a=null;
         }
-        
-        // for(int m : a){
-        //     System.out.print(m+" ");
-        // }
+
+        for(int i =1; i<=n; i++){
+            a[i-1] = i+k;
+            // if(k>0 && i%k ==1){
+            //     k *=-1;
+            // }
+        }
+
+        for(int m : a){
+            System.out.print(m+" ");
+        }
         
 
        
