@@ -11,6 +11,7 @@ public class _queens_attack_2 {
         int dwl = Math.min(left, down);
         int dwr = Math.min(right, down);
 
+        
 
 
         
