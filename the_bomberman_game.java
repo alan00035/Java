@@ -8,8 +8,7 @@ public class the_bomberman_game {
         String a1=".......";String a2 = "...0...";String a3 ="....0.."; String a4 ="......."; String a5 ="00.....";String a6="00.....";
 
         grid.add(a1);grid.add(a2);grid.add(a3);grid.add(a4);grid.add(a5);grid.add(a6);
-        // int[][] arr = new int[6][7];
-        
+        // int[][] arr = new int[6][7]
 
         //  1)gird list is the initial stage with bomb 2)  sec one - do nothing
         //  3) sec two - plants bombs in all cells; 4) sec three - initial bomb explored
