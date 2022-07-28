@@ -6,34 +6,36 @@ import java.util.List;
 
 public class bigsorting {
     public static void main(String[] args) {
-        // String[] unsorted ={"1","150","31415926535897932384626433832795","3","200"};
-        String[] unsorted ={"234","3","3","45"};
+        String[] unsorted ={"1","150","31415926535897932384626433832795","3","200"};
+        // String[] unsorted ={"234","3","3","45"};
         
         List<String> unsortedList = Arrays.asList(unsorted);
         
+
         // Collections.sort(unsortedList);
         // System.out.println(unsortedList);
 
-        // Comparator<String> compare = new Comparator<String>() {
-
-        //     @Override
-        //     public int compare(String o1, String o2) {
-        //         if(o1.length()>o2.length())
-        //             return 1;
-        //         if(o1.length()<o2.length())
-        //             return -1;
-        //         else{
-        //             if(o1.length() ==o2.length()){
-                        
-        //             }
-        //         }   
-        //     }
+        Comparator<String> compare = new Comparator<String>() {
+            int ans = 0;
+            @Override
+            public int compare(String o1, String o2) {
+                if(o1.length()>o2.length())
+                    ans= 1;
+                if(o1.length()<o2.length())
+                    ans= -1;
+                else{
+                    if(o1.length() ==o2.length()){
+                        ans= Integer.parseInt(o2) < Integer.parseInt(o1) ? 1:-1;
+                    }
+                }
+                return ans;   
+            }
             
-        // };
+        };
 
-        // Collections.sort(unsortedList, compare);
+        Collections.sort(unsortedList, compare);
 
-        // System.out.println(unsortedList);
+        System.out.println(unsortedList);
     
 }
 
