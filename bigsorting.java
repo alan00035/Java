@@ -25,7 +25,7 @@ public class bigsorting {
                     ans= -1;
                 else{
                     if(o1.length() ==o2.length()){
-                        ans= Integer.parseInt(o2) < Integer.parseInt(o1) ? 1:-1;
+                        ans= Long.parseLong(o2) < Long.parseLong(o1) ? 1:-1;
                     }
                 }
                 return ans;   
