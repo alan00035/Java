@@ -36,7 +36,10 @@ public class bigsorting {
         Collections.sort(unsortedList, compare);
 
         System.out.println(unsortedList);
-    
+
+// this is better syntax
+// Collections.sort(unsorted, (x, y) -> x.length() == y.length() ? x.compareTo(y) : Integer.compare(x.length(), y.length()));
+// return unsorted;
 }
 
 
@@ -44,3 +47,5 @@ public class bigsorting {
 }
 
 // https://www.hackerrank.com/challenges/big-sorting/problem?isFullScreen=true
+
+
