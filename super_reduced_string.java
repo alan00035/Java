@@ -1,10 +1,9 @@
 import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.Map.Entry;
 
 public class super_reduced_string {
     public static void main(String[] args) {
-        String str = "aabaccddd";
+        String str = "aaabccddd";
 
         HashMap<Character, Integer> hm = new HashMap<>();
 
@@ -18,12 +17,23 @@ public class super_reduced_string {
             }
         }
         
+        StringBuilder sb = new StringBuilder();
+
         for(Entry<Character,Integer> entry : hm.entrySet() ){
             if(entry.getValue()%2 ==1){
-                System.out.println(entry.getKey());
+                sb.append(entry.getKey());
             }
         }
-            
+
+        String ans;
+        if(sb.length() ==0)
+            ans = "Empty String";
+        
+        else
+            ans = sb.toString();
+        
+
+            System.out.println(ans);
         }
 }
 
