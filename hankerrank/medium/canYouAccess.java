@@ -1,12 +1,6 @@
 package hankerrank.medium;
-
-import java.io.BufferedReader;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.security.Permission;
-
-import hankerrank.easy.reflection;
 
 public class canYouAccess {
     
