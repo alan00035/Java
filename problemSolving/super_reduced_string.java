@@ -3,12 +3,26 @@ import java.util.Map.Entry;
 
 public class super_reduced_string {
         public static void main(String[] args) {
-            String s = "zztqooauhujtmxnsbzpykwlvpfyqijvdhuhiroodmuxiobyvwwxupqwydkpeebxmfvxhgicuzdealkgxlfmjiucasokrdznmtlwh";
-
-            int count =0;
-            for(char ch : s.toCharArray()){
-                
+            // String s = "zztqooauhujtmxnsbzpykwlvpfyqijvdhuhiroodmuxiobyvwwxupqwydkpeebxmfvxhgicuzdealkgxlfmjiucasokrdznmtlwh";
+            String s ="aaabcc";
+            String ans = null;
+            StringBuilder sb = new StringBuilder(s);
+            int i;
+            for(i=1; i<sb.length(); i++){
+                if(sb.charAt(i)==sb.charAt(i-1)){
+                    sb.delete(i-1, i+1);
+                    i=0;  //use to cycle the loop
+                }
+              
             }
+
+            if(sb.length()==0){
+                ans = "EMPTY STRING";
+            }
+            else    {
+                ans = sb.toString();
+            }
+            System.out.println(ans);
 
         }
 
