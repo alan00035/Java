@@ -1,3 +1,4 @@
+package statistics;
 public class day0_weighted_mean {
     public static void main(String[] args) {
 
