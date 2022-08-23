@@ -11,8 +11,6 @@ public class day_1_quartiles {
         List<Integer> result = new ArrayList<>();
         
         Collections.sort(arr);
-
-
         int m, n;
         for(m=0; m<arr.size(); m+=2){
                 if(arr.size()%2 ==0){
