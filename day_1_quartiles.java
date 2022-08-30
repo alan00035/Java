@@ -26,6 +26,10 @@ public class day_1_quartiles {
                 for(n=0; n<=m;n++){
                     result.add((arr.get(n)+arr.get(n+1))/2);
                 }
+                for(n=m+2; n<length-1;n++){
+                    result.add((arr.get(n)+arr.get(n+1))/2);
+                }
+                result.add(arr.get(m+1));
 
     
         }
