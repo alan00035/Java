@@ -13,8 +13,6 @@ public class day_1_quartiles {
         Collections.sort(arr);
 
         int length = arr.size();
-
-
         int n,m = length/2;
         if(length !=0)
              if(m%2 !=0)
