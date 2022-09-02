@@ -28,8 +28,6 @@ public class day_1_quartiles {
                     result.add((arr.get(n)+arr.get(n+1))/2);
                 }
                 result.add(arr.get(m+1));
-
-    
         }
 
         // System.out.println(result);
