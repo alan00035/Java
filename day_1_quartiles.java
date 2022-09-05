@@ -5,7 +5,7 @@ import java.util.List;
 
 public class day_1_quartiles {
     public static void main(String[] args) {
-        Integer[] arr1 ={5,7,1,3,9};
+        Integer[] arr1 ={5,7,1,3,9,11};
         
         List<Integer> arr = Arrays.asList(arr1);
         List<Integer> result = new ArrayList<>();
@@ -15,7 +15,6 @@ public class day_1_quartiles {
         // System.out.println(arr);
         int length = arr.size();
         int n,m = length/2;
-
         // System.out.println(length+" "+m);
         // if(length !=0)
              if(length%2 ==0)
@@ -34,7 +33,7 @@ public class day_1_quartiles {
                 result.add(arr.get(m+1));
         }
 
-        // System.out.println(result);
+        System.out.println(result);
         // System.out.println(m);
     }
 }
