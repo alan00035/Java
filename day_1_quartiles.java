@@ -33,7 +33,7 @@ public class day_1_quartiles {
                 result.add(arr.get(m+1));
         }
 
-        System.out.println(result);
-        // System.out.println(m);
+        // System.out.println(result);
+        System.out.println(m);
     }
 }

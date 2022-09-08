@@ -1,8 +1,10 @@
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map.Entry;
 
 public class day_0_mean_median_and_mode {
@@ -14,10 +16,14 @@ public class day_0_mean_median_and_mode {
         int maxValue=0;
         int total = 10;
         // int[] arr = new int[total];
-       int[] arr={64630, 11735, 14216, 99233, 14470,4978,73429, 38120, 51135, 67060};
+       Integer[] ar={64630, 11735, 14216, 99233, 14470,4978,73429, 38120, 51135, 67060};
 
-       int mean = Arrays.stream(arr).sum()/total;
-       int median = (arr[total/2] + arr[(total/2)+1])/2;
+      List<Integer> arr = Arrays.asList(ar);
+      int mean = arr.stream().mapToInt(Integer::intValue).sum()/total;
+      int median = (arr.get(total/2) + arr.get((total/2) +1) )/2;
+
+      //  int mean = Arrays.stream(arr).sum()/total;
+      //  int median = (arr[total/2] + arr[(total/2)+1])/2;
 
        HashMap<Integer, Integer> hm = new HashMap<>();
        for(int i =0; i<total; i++){
