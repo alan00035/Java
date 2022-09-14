@@ -22,7 +22,6 @@ public class day_0_mean_median_and_mode {
       int mean = arr.stream().mapToInt(Integer::intValue).sum()/total;
       int median = (arr.get(total/2) + arr.get((total/2) +1) )/2;
 
-
       //  int mean = Arrays.stream(arr).sum()/total;
       //  int median = (arr[total/2] + arr[(total/2)+1])/2;
 
