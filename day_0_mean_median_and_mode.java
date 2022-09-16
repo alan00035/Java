@@ -31,6 +31,7 @@ public class day_0_mean_median_and_mode {
        HashMap<Integer, Integer> hm = new HashMap<>();
        for(int i =0; i<total; i++){
         int value = arr [i];
+        
         if(hm.containsKey(value)){
             hm.put(value, hm.get(value)+1);
         }
