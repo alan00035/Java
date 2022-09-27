@@ -37,7 +37,6 @@ public class day_0_mean_median_and_mode {
         else
             hm.put(value, 1);
        }
-
        for(Entry<Integer, Integer> entry: hm.entrySet()){
          if(entry.getValue() >max)
             max = entry.getValue();
