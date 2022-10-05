@@ -48,7 +48,7 @@ public class day_0_mean_median_and_mode {
             Arrays.sort(arr);
             maxValue = arr[0];
        }
-       
+      
        System.out.printf("%.1f", mean);
        System.out.println();
        System.out.printf("%.1f", median);
