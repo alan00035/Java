@@ -55,6 +55,7 @@ public class day_0_mean_median_and_mode {
        System.out.println();
        System.out.println(maxValue);
        
+       
 
       
     }
