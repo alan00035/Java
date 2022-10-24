@@ -16,6 +16,7 @@ public class Insertion_sort_part_1 {
             print(arr);
         }
      
+        
             arr.set(count+1, temp);
             print(arr);
 
