@@ -11,19 +11,16 @@ public class Insertion_Sort_Part_2 {
 
             for(a =1; a<n; a++){
                 int temp = arr.get(a);
-                int position = a;
-            
-                while(temp<arr.get(position-1)){
-                    Collections.swap(arr, position, position-1);
-                    continue;
+                int count = a-1;
+                while(count >=0 && arr.get(count)>temp){
+                    Collections.swap(arr, count+1, count);
+                    count--; // dont forget this one
+                } 
+                System.out.println(arr);
                 }
                 
-                System.out.println(arr);
-            }
-        
 
-                // System.out.println(arr);
-            }        
+            }
 
 
 }
