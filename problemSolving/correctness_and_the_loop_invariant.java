@@ -7,9 +7,10 @@ public class correctness_and_the_loop_invariant {
         // Scanner scan = new Scanner(System.in);
         // int a = scan.nextInt();
         // int[] arr = new int[a-1];
-        // for (int i=0; i<a; i++){
-        //     arr[i] = int.nextInt();
-        // }
+        // while (scan.hasNext()){
+        //     arr[a-1] = scan.nextInt();    // because this is a sorting exer, doesnt matter the order to input data;
+        //     a--;}
+
         int[] arr ={7 ,4 ,3 ,5 ,6, 2} ;
           Arrays.sort(arr);
 
