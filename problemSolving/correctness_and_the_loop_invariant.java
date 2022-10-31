@@ -8,7 +8,7 @@ public class correctness_and_the_loop_invariant {
         // int a = scan.nextInt();
         // int[] arr = new int[a-1];
         // for (int i=0; i<a; i++){
-        //     arr[i] = a;
+        //     arr[i] = int.nextInt();
         // }
         int[] arr ={7 ,4 ,3 ,5 ,6, 2} ;
           Arrays.sort(arr);
