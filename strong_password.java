@@ -3,19 +3,20 @@ import java.util.regex.Pattern;
 
 public class strong_password {
     public static void main(String[] args) {
-        String password ="ab1";
+        String password ="#HANCKSEED";
         int n = password.length();
 
         if(!checkLength(n) ){
             System.out.println(6-n);
+        }
+        else if(checkLength(n)){
+           System.out.println(checkString(password));
         }
         
 
     }
     public static int checkString(String str){
         int i =0;
-        
-
         for(char ch : str.toCharArray()){
             if(!Character.isDigit(ch)){
                 i++;
