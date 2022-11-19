@@ -2,7 +2,9 @@
 test.java
 random.java
 printer.java
-/statistics/*
+
 _*.java
 
 README.md
+others/*
+statistics/*
