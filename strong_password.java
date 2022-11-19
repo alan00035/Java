@@ -12,8 +12,6 @@ public class strong_password {
         else if(checkLength(n)){
            System.out.println(checkString(password));
         }
-        
-
     }
     public static int checkString(String str){
         int i =0;
