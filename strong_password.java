@@ -3,7 +3,13 @@ public class strong_password {
         String str = "ab1";
         int n = str.length();
         
+
         
+    }
+    static int checkPassword(String str){
+
+
+        return 0;
     }
 
     
