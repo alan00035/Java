@@ -3,11 +3,16 @@ public class strong_password {
         String str = "ab1";
         int n = str.length();
         
+        if(n<6){
 
+        }
+        else{
+            
+        }
         
     }
     static int checkPassword(String str){
-
+        
 
         return 0;
     }
