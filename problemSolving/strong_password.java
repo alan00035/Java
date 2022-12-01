@@ -1,6 +1,6 @@
 public class strong_password {
     public static void main(String[] args) {
-        String str = "ab1";
+        String str = "4700";
         int n = str.length();
         int gap = 6-n;
         int missing = checkPassword(str);
@@ -19,11 +19,12 @@ public class strong_password {
         for(char c : str.toCharArray()){
             if(Character.isDigit(c)){
                 num++;
+                
             }
-            if(Character.isUpperCase(c)){
+            else if(Character.isUpperCase(c)){
                 u++;
             }
-            if(Character.isLowerCase(c)){
+            else if(Character.isLowerCase(c)){
                 l++;
             }
             else{
@@ -35,6 +36,8 @@ public class strong_password {
         if(u==0) count+=1;
         if(l==0) count+=1;
         if(sp==0) count+=1;
+
+        System.out.println(num+" "+u+" "+ l+ " "+ sp +" ");
         return count;
     }
 
