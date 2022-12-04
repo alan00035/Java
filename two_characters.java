@@ -10,8 +10,6 @@ public class two_characters {
         
         if(defineChar(s) != 0){
             StringBuilder sb = new StringBuilder(s);
-            
-
         }
     
 
