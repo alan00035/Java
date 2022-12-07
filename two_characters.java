@@ -12,7 +12,6 @@ public class two_characters {
             StringBuilder sb = new StringBuilder(s);
         }
     
-
     }
 
     static char defineChar(String str){
