@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func main() {
+func hello() {
 	//Enter your code here. Read input from STDIN. Print output to STDOUT
 	var inputs []string
 	scanner := bufio.NewScanner(os.Stdin)
