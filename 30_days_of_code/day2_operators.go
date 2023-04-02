@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"io"
 	"os"
 	"strconv"
@@ -20,9 +21,15 @@ import (
 func solve(meal_cost float64, tip_percent int32, tax_percent int32) {
 	// Write your code here
 
+	var tip float64 = meal_cost * float64(tip_percent) * 0.01
+	var tax float64 = float64(tax_percent) * float64(meal_cost) * 0.01
+	var total_cost = int(tip + tax + meal_cost)
+
+	fmt.Println(total_cost)
+
 }
 
-func main() {
+func mains() {
 	reader := bufio.NewReaderSize(os.Stdin, 16*1024*1024)
 
 	meal_cost, err := strconv.ParseFloat(strings.TrimSpace(readLine(reader)), 64)
