@@ -14,7 +14,6 @@ func (p person) NewPerson(initialAge int) person {
 
 func (p person) amIOld() {
 	//Do some computation in here and print out the correct statement to the console
-
 }
 
 func (p person) yearPasses() person {
