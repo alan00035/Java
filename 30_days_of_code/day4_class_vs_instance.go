@@ -19,11 +19,11 @@ func (p person) NewPerson(initialAge int) person {
 func (p person) amIOld() {
 	//Do some computation in here and print out the correct statement to the console
 	if p.age < 13 {
-		fmt.Println("You are young..")
+		fmt.Println("You are young.")
 	} else if p.age >= 13 && p.age < 18 {
-		fmt.Println("You are a teenager..")
+		fmt.Println("You are a teenager.")
 	} else {
-		fmt.Println("You are old..")
+		fmt.Println("You are old.")
 	}
 
 }
