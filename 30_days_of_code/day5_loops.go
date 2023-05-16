@@ -19,7 +19,6 @@ func main() {
 	for i := 0; i <= 10; i++ {
 		fmt.Println()
 	}
-
 }
 
 func readLine(reader *bufio.Reader) string {
