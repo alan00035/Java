@@ -16,9 +16,11 @@ func main() {
 	checkError(err)
 	n := int32(nTemp)
 
-	for i := 0; i <= 10; i++ {
-		fmt.Println()
+	for i := int32(1); i <= 10; i++ {
+		sum := int32(n * i)
+		fmt.Println(n, "x", i, "=", sum)
 	}
+
 }
 
 func readLine(reader *bufio.Reader) string {
