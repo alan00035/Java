@@ -2,7 +2,9 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"os"
+	"strconv"
 )
 
 func main() {
@@ -18,5 +20,25 @@ func main() {
 		}
 
 		inputs = append(inputs, input)
+	}
+
+	count, err := strconv.Atoi(inputs[0])
+
+	if err != nil {
+		for i := 0; i < count; i++ {
+			str := inputs[i]
+			chars := []rune(str)
+			for x := 0; x < len(chars); x++ {
+				if x%2 == 0 {
+					a := append(chars[:x])
+				} else {
+					b := append(chars[:x])
+
+				}
+
+			}
+
+			fmt.Println(a, " ", b)
+		}
 	}
 }
