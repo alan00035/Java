@@ -30,10 +30,10 @@ func main() {
 			chars := []rune(str)
 			for x := 0; x < len(chars); x++ {
 				if x%2 == 0 {
-					a := append(chars[:x])
+					// a := append(chars[:x])
 				} else {
-					b := append(chars[:x])
-
+					// b := append(chars[:x])
+					// fmt.Println(a,b)
 				}
 
 			}
